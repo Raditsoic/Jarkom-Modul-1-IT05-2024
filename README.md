@@ -41,6 +41,32 @@ Didapat creds dengan email **tareq@gmail.com** dan password **tareq@nanomate**.
 
 ### Secret
 
+Dengan menggunakan filter `tcp` dan melihat serta memfilter stream yang ada, kita bisa melihat file selain malware yang dikirim oleh attacker.
+
+![filter_stream](image/Secrets-1.png)
+
+Di atas adalah stream di mana percakapan attacker mengirimkan file selain malware.
+
+![file_jpg](image/Secrets-2.png)
+
+Di atas adalah bukti file yang dikirimkan oleh attacker ke korban.
+
+![server_filezilla](image/secrets-5.png)
+
+Setelah menemukan bukti filenya, buka server filezilla menggunakan xampp dan mengatur user sesuai dengan attacker dan setting dengan shared folder agar kita bisa mengakses folder attacker dan memindahkannya ke folder kita.
+
+![client_filezilla](image/secrets-6.png)
+
+Setelah menghubungkan attacker di server filezilla, atur client filezilla sesuai dengan credential attackernya agar kita dapat mengakses folder attacker tersebut.
+
+![isi_filejpg](image/secrets-3.png)
+
+Ini adalah gambar yang dikirim oleh attacker dan di sini kata yang dikutip adalah **MIO MIRZA**.
+
+![soal_flag](image/secrets-4.png)
+
+Lalu kita nc soalnya dan memasukkan jawaban dari pertanyaannya sehingga kita mendapatkan flag yang akan kita submit
+
 ### Creds
 
 Dengan meggunakan filter `ftp` kita bisa mengidintifikasi packet - packet dan follow streamnya. Dari tcp stream terakhir flow dari packet - packet dan didapat credsnya adalah dengan username: **h3ngk3rTzy** dan password: **S!l3ncE**
